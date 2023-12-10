@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página de Prueba</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            min-height: 200vh;
+            margin: 0;
+            background-color: black; /* Ajusta según el diseño de tu página */
+        }
+
+        .gif-style {
+            width: 1000px; /* Ajusta según sea necesario */
+            height: auto; /* Mantiene la relación de aspecto del GIF */
+        }
+
+        h1 {
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            top: 0;
+            color: white; /* Para contraste */
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <img src="C:/Users/Dave/Desktop/Animaciones y recurso web/Animacion Scroll/complexus text.gif" class="gif-style" alt="Texto en blanco">
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.to(".gif-style", {
+            rotation: 900,
+            duration: 1,
+            scrollTrigger: {
+                trigger: '.gif-style',
+                scrub: 2,
+                markers: false,
+            }
+        });
+    </script>
+</body>
+</html>
